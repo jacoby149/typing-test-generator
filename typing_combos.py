@@ -15,7 +15,7 @@ def get_r_hand_pairs():
     """
         returns every pair of the right hand keys with punctuation.
     """
-    keys = "yuiophjkl'bnm,."
+    keys = "yuiophjkl'nm,."
     return get_pairs(keys)
 
 
@@ -23,7 +23,7 @@ def get_r_hand_letter_pairs():
     """
         returns every pair of the right hand keys.
     """
-    keys = "yuiophjklbnm"
+    keys = "yuiophjklnm"
     return get_pairs(keys)
 
 
@@ -31,7 +31,7 @@ def get_l_hand_letter_pairs():
     """
         returns every pair of the left hand keys.
     """    
-    keys = 'qwertasdfgzxcv'
+    keys = 'qwertasdfgzxcvb'
     return get_pairs(keys)
 
 
@@ -76,7 +76,7 @@ def batch(chars, word_length=5):
 # batch the string into overlapping 5 letter words for the typing test.
 left = batch(typist(get_l_hand_letter_pairs()))
 right = batch(typist(get_r_hand_letter_pairs()))
-
+right_p = batch(typist(get_r_hand_pairs()))
 
 # print the typing tests.
 print("Left Hand")
@@ -84,3 +84,5 @@ print(left)
 print("")
 print("Right Hand")
 print(right)
+print("Right Hand With Punct.")
+print(right_p)
