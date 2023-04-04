@@ -34,6 +34,12 @@ def get_l_hand_letter_pairs():
     keys = 'qwertasdfgzxcvb'
     return get_pairs(keys)
 
+def get_vitamin_c():
+    """
+        to fix my major issues with the c key plus bottom row.
+    """    
+    keys = 'xcvbsdfgwert'
+    return get_pairs(keys)
 
 def typist(pairs):
     """
@@ -77,6 +83,7 @@ def batch(chars, word_length=5):
 left = batch(typist(get_l_hand_letter_pairs()))
 right = batch(typist(get_r_hand_letter_pairs()))
 right_p = batch(typist(get_r_hand_pairs()))
+vitamin_c = batch(typist(get_vitamin_c()))
 
 # print the typing tests.
 print("Left Hand")
@@ -86,3 +93,5 @@ print("Right Hand")
 print(right)
 print("Right Hand With Punct.")
 print(right_p)
+print ("vitamin c")
+print(vitamin_c)
